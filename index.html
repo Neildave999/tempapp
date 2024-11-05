@@ -28,41 +28,8 @@
     <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    .logo-carousel-container {
-      overflow: hidden;
-      width: 100%;
-    }
-    
-    .logo-carousel {
-      display: flex;
-      animation: scroll 40s linear infinite;
-      width: fit-content; /* This ensures the carousel takes up only as much width as needed */
-    }
-    
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-    
-    .logo-carousel:hover {
-      animation-play-state: paused;
-    }
-    
-    /* Ensure logos are side by side */
-    .logo-carousel > div {
-      flex: 0 0 auto;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 640px) {
-      .logo-carousel {
-        animation-duration: 30s; /* Slightly faster on mobile */
-      }
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJX3Kx7SmpWJfJjXdhHtZhtOjdVXdwHmw7pzKhI4/zFslubWqbuZYvXrZnJd" crossorigin="anonymous">
+
   </head>
 
   <body>
@@ -630,6 +597,9 @@
     <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybYbLa90r0k6lNwMJZ8f5j9lO6xwDGVkTZwYoFfFZJzUReK89l" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0pK2w5p77O70tZfh5dyN3SmVZ6M2FJ6QiqfAh4FgBdS2FJxw" crossorigin="anonymous"></script>
+
   </body>
 
 </html>
