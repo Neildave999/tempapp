@@ -508,6 +508,18 @@ var videoControllerInit = function videoControllerInit() {
   }
 };
 
+// Logo carousel infinite scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselContainer = document.querySelector('.logo-carousel-container');
+  if (carouselContainer) {
+    const carousel = carouselContainer.querySelector('.logo-carousel');
+    if (carousel) {
+      const clone = carousel.cloneNode(true);
+      carouselContainer.appendChild(clone);
+    }
+  }
+});
+
 /* -------------------------------------------------------------------------- */
 /*                            Theme Initialization                            */
 /* -------------------------------------------------------------------------- */
