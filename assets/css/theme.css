@@ -21085,3 +21085,80 @@ footer .icons {
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
+
+
+/* Additional added Container for the entire carousel */
+.logo-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The carousel itself */
+.logo-carousel {
+    display: flex;
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    will-change: transform; /* Optimizes for animations */
+}
+
+/* Individual logo items */
+.logo-item {
+    flex: 0 0 auto; /* Do not grow or shrink, but base on auto */
+    padding: 0 15px; /* Space between logos, adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7; /* Optional: slightly fade logos for effect */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Smooth transition for hover effects or movement */
+}
+
+/* Logo images */
+.logo-item img {
+    width: auto;
+    max-height: 40px; /* Consistent with your sm:h-[40px] */
+    object-fit: contain; /* Ensures the logo isn't stretched */
+}
+
+/* Logo text */
+.logo-item p {
+    margin-top: 5px;
+    font-size: 12px; /* Base size */
+    white-space: nowrap; /* Keeps the text on one line */
+}
+
+/* Hover effect for interaction */
+.logo-item:hover {
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.05); /* Slight zoom for interaction feedback */
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) { /* Assuming sm in Tailwind */
+    .logo-item img {
+        max-height: 40px;
+    }
+    
+    .logo-item p {
+        font-size: 14px; /* Adjust as per your sm:text-sm */
+    }
+}
+
+/* Ensure smooth scrolling */
+.logo-carousel {
+    animation: scroll 40s linear infinite; /* Adjust time for speed */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Assuming you have duplicated content for infinite scroll */
+    }
+}
+
+/* Pause animation on hover */
+.logo-carousel:hover {
+    animation-play-state: paused;
+}
